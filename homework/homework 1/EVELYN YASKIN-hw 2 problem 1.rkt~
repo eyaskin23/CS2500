@@ -1,0 +1,76 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |EVELYN YASKIN-hw 2 problem 1|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+; 1string: String -> True/False
+; States whether the string is a valid answer to a 5 option multiple choice question. 
+
+(check-expect (1string 1STRING-A) true)
+(check-expect (1string 1STRING-B) true)
+(check-expect (1string 1STRING-C) true)
+(check-expect (1string 1STRING-D) true)
+(check-expect (1string 1STRING-E) true)
+(check-expect (1string 1STRING-a) true)
+(check-expect (1string 1STRING-b) true)
+(check-expect (1string 1STRING-c) true)
+(check-expect (1string 1STRING-d) true)
+(check-expect (1string 1STRING-e) true)
+(check-expect (1string 1STRING-f) false)
+(check-expect (1string 1STRING-7) false)
+(check-expect (1string 1STRING-?) false)
+(check-expect (1string 1STRING-Z) false)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define 1STRING-A "A")
+(define 1STRING-B "B")
+(define 1STRING-C "C")
+(define 1STRING-D "D")
+(define 1STRING-E "E")
+(define 1STRING-a "a")
+(define 1STRING-b "b")
+(define 1STRING-c "c")
+(define 1STRING-d "d")
+(define 1STRING-e "e")
+(define 1STRING-f "f")
+(define 1STRING-7 "7")
+(define 1STRING-? "?")
+(define 1STRING-Z "Z")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define (1string a)
+  (cond
+    [(string=? a 1STRING-A) true]
+    [(string=? a 1STRING-B) true]
+    [(string=? a 1STRING-C) true]
+    [(string=? a 1STRING-D) true]
+    [(string=? a 1STRING-E) true]
+    [(string=? a 1STRING-a) true]
+    [(string=? a 1STRING-b) true]
+    [(string=? a 1STRING-c) true]
+    [(string=? a 1STRING-d) true]
+    [(string=? a 1STRING-e) true]
+    [(string=? a 1STRING-f) false]
+    [(string=? a 1STRING-7) false]
+    [(string=? a 1STRING-?) false]
+    [(string=? a 1STRING-Z) false]))
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
